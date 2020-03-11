@@ -3,9 +3,9 @@
     <h2>Это основное содержимое</h2>
     {% if 'инженер' in {{ prof }} or 'строитель' in {{ prof }}%}
         <h2>Инженерные тренажеры</h2>
-        <img src="starship_engineer_trainers.png">
+        <img src="static/starship_engineer_trainers.png">
     {% else %}
         <h2>Научные симуляторы</h2>
-        <img src="starship_science_simulators.png">
+        <img src="static/starship_science_simulators.png">
     {% endif %}
 {% endblock %}
