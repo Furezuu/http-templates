@@ -13,7 +13,6 @@ def index(title):
 def training(prof):
     params = {}
     params['prof'] = prof
-    params['img1']
     return render_template('training.html', **params)
 
 
