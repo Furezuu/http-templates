@@ -16,5 +16,12 @@ def training(prof):
     return render_template('training.html', **params)
 
 
+@app.route('/list_prof/<list>')
+def list_prof(list):
+    params = {}
+    params['list'] = list
+    return render_template('list_prof.html', **params)
+
+
 if __name__ == '__main__':
     app.run('localhost', 8080)
