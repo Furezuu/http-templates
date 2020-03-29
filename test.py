@@ -18,6 +18,8 @@ def training(prof):
 
 @app.route('/list_prof/<list>')
 def list_prof(list):
+    if list not in ['ul', 'ol']:
+        return jsonify({'error': 'Parameter list must be "ul" or "ol"'})
     params = {}
     params['list'] = list
     return render_template('list_prof.html', **params)
