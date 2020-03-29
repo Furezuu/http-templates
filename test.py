@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, url_for
 
 app = Flask('my server')
 
@@ -13,6 +13,8 @@ def index(title):
 def training(prof):
     params = {}
     params['prof'] = prof
+    params['route_to_engineer'] = url_for('static', filename='img/starship_engineer_trainers.png')
+    params['route_to_science'] = url_for('static', filename='img/starship_science_simulators.png')
     return render_template('training.html', **params)
 
 
