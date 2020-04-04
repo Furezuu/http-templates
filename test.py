@@ -35,5 +35,13 @@ def answer():
     return render_template('auto_answer.html', **params)
 
 
+@app.route('/distribution')
+def distribution():
+    params = {}
+    params['colonists'] = request.json
+    params['path_to_static'] = url_for('static')
+    return render_template('distribution.html', **params)
+
+
 if __name__ == '__main__':
     app.run('localhost', 8080)
