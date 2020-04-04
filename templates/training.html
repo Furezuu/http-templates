@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Это основное содержимое</h2>
-    {% if 'инженер' in {{ prof }} or 'строитель' in {{ prof }}%}
+    {% if 'инженер' in prof%}
+        <h2>Инженерные тренажеры</h2>
+        <img src="static/starship_engineer_trainers.png">
+    {% elif 'строитель' in prof %}
         <h2>Инженерные тренажеры</h2>
         <img src="static/starship_engineer_trainers.png">
     {% else %}
