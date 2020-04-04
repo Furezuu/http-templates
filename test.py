@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, url_for
+from flask import Flask, render_template, jsonify, url_for, request
 
 app = Flask('my server')
 
@@ -25,6 +25,14 @@ def list_prof(list):
     params = {}
     params['list'] = list
     return render_template('list_prof.html', **params)
+
+
+@app.route('/answer')
+@app.route('/auto_answer')
+def answer():
+    params = request.json
+    params['path_to_static'] = url_for('static')
+    return render_template('auto_answer.html', **params)
 
 
 if __name__ == '__main__':
