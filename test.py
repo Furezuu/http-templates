@@ -38,7 +38,6 @@ def answer():
 def distribution():
     params = {}
     params['colonists'] = request.json
-    params['path_to_static'] = url_for('static')
     return render_template('distribution.html', **params)
 
 
