@@ -31,7 +31,6 @@ def list_prof(list):
 @app.route('/auto_answer')
 def answer():
     params = request.json
-    params['path_to_static'] = url_for('static')
     return render_template('auto_answer.html', **params)
 
 
