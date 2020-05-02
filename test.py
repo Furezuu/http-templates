@@ -41,5 +41,10 @@ def distribution():
     return render_template('distribution.html', **params)
 
 
+@app.route('/login')
+def login():
+    return render_template('login.html', title='Аварийный доступ')
+
+
 if __name__ == '__main__':
     app.run('localhost', 8080)
